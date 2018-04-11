@@ -11,7 +11,7 @@ if mod > 5:
           .format(number, mod))
 
 elif mod == 0:
-    print("Last digit of {:d} is 0 and is 0".format(number))
+    print("Last digit of {:d} is {:d} and is 0".format(number, mod))
 
 elif mod < 6:
     print("Last digit of {:d} is {:d} and is less than 6 and not 0"
