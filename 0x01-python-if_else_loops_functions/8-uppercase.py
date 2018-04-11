@@ -10,4 +10,3 @@ def uppercase(str):
         upper = upper + i
 
     print(upper, end="\n")
-    return upper
