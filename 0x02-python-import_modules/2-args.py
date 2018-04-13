@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    import sys, getopt
+    import sys
     ac = len(sys.argv)
     j = 1
 
