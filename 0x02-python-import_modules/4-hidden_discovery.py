@@ -3,7 +3,8 @@ if __name__ == "__main__":
     import hidden_4
     import sys
     a = dir(hidden_4)
+    b = "__"
 
-    print("{}".format(a[8]))
-    print("{}".format(a[9]))
-    print("{}".format(a[10]))
+    for i in range(0, 11):
+        if a[i][0:2] != b:
+            print("{}".format(a[i]))
