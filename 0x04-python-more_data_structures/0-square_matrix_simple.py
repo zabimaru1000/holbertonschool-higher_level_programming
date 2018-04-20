@@ -1,13 +1,12 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
     blank = []
-    a = []
-    for x in range(len(matrix)):
-        a += matrix[x]
 
-    for i in range(len(a)):
-        exp = a[i] ** 2
-        blank.append(exp)
+    for i in matrix:
+        for j in i:
+            blank.append(j*j)
 
-    new = [blank[i:i+3] for i in range(0, len(blank), 3)]
+    slicer = len(blank) ** (1/2)
+    new = [blank[i:i+int(slicer)] for i in range(0, len(blank), int(slicer))]
+
     return new
