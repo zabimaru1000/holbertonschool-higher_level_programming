@@ -1,17 +1,21 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
     rdict = {
-        'I' : 1,
-        'V' : 5,
-        'X' : 10,
-        'L' : 50,
-        'C' : 100,
-        'D' : 500,
-        'M' : 1000
+        'I': 1,
+        'V': 5,
+        'X': 10,
+        'L': 50,
+        'C': 100,
+        'D': 500,
+        'M': 1000
     }
 
     prev = 1001
     total = 0
+    str_check = isinstance(roman_string, str)
+
+    if str_check is False:
+        return 0
 
     if roman_string is not None:
         for i in roman_string:
@@ -22,3 +26,6 @@ def roman_to_int(roman_string):
                 prev = rdict[i]
 
         return total
+
+    else:
+        return 0
