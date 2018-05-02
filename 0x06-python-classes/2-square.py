@@ -7,7 +7,7 @@ class Square:
         try:
             if size < 0:
                 raise ValueError("size must be >= 0")
-            self.Square = size
+            self.__size = size
 
-        execpt TypeError:
+        except TypeError:
                 raise TypeError("size must be an integer")
