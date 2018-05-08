@@ -25,7 +25,7 @@ class Rectangle:
             return string
         for col in range(self.__height):
             for row in range(self.__width):
-                string += Rectangle.print_symbol
+                string += "#"
             if col < self.__height - 1:
                 string += "\n"
 
@@ -35,7 +35,7 @@ class Rectangle:
         """
         Method to return string representation
         """
-        Rectangle.print_symbol = print_symbol
+        print_symbol = Rectangle.print_symbol
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
 
     def __del__(self):
@@ -95,3 +95,15 @@ class Rectangle:
         Method to return total perimeter
         """
         return self.__width * 2 + self.__height * 2
+
+    def bigger_or_equal(rect_1, rect_2):
+        """
+        Method to check if rectangle is a valid type
+        """
+        if not isinstance(rect_1, Rectangle.area):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+
+        if not isinstance(rect_2, Rectangle.area):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+
+        return rect_1
