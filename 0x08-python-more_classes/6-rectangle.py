@@ -1,8 +1,11 @@
+#!/usr/bin/python3
 class Rectangle:
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         self.__height = height
         self.__width = width
-        self.number_of_instances = number_of_instances
+        Rectangle.number_of_instances += 1
 
     def __str__(self):
         string = ""
@@ -20,11 +23,8 @@ class Rectangle:
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
 
     def __del__(self):
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
-
-    def number_of_instances(self):
-        self.number_of_instances = 0
-
 
     @property
     def height(self):
