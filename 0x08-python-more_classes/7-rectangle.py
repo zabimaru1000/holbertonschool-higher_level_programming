@@ -3,14 +3,17 @@
 Creates class Rectangle
 """
 
-
 class Rectangle:
+    number_of_instances = 0
+    print_symbol = "#"
+
     def __init__(self, width=0, height=0):
         """
         Method that initiates height and width
         """
         self.__height = height
         self.__width = width
+        Rectangle.number_of_instances += 1
 
     def __str__(self):
         """
@@ -21,7 +24,7 @@ class Rectangle:
             return string
         for col in range(self.__height):
             for row in range(self.__width):
-                string += "#"
+                string += Rectangle.print_symbol
             if col < self.__height - 1:
                 string += "\n"
 
@@ -31,12 +34,14 @@ class Rectangle:
         """
         Method to return string representation
         """
-        return "Rectangle({:d}, {:d})".format(self.__width, self.height)
+        Rectangle.print_symbol = print_symbol
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
 
     def __del__(self):
         """
         Method to delete instance
         """
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
 
     @property
