@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """
-Creates a class Square
+Creates a class Rectangle
 """
 
 
-class Square:
+class Rectangle:
     """
     Pass through the class
     """
