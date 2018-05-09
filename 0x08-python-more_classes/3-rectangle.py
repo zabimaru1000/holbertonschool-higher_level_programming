@@ -17,7 +17,7 @@ class Rectangle:
         Method to return string representation
         """
         string = ""
-        if self.__height is 0 and self.__width is 0:
+        if self.__height is 0 or self.__width is 0:
             return string
         for col in range(self.__height):
             for row in range(self.__width):
