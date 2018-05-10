@@ -25,7 +25,7 @@ class Rectangle:
             return string
         for col in range(self.__height):
             for row in range(self.__width):
-                string += "#"
+                string += str(self.print_symbol)
             if col < self.__height - 1:
                 string += "\n"
 
@@ -96,14 +96,19 @@ class Rectangle:
         """
         return self.__width * 2 + self.__height * 2
 
+    @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """
         Method to check if rectangle is a valid type
         """
-        if not isinstance(rect_1, Rectangle.area):
+        if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
 
-        if not isinstance(rect_2, Rectangle.area):
+        if not isinstance(rect_2, Rectangle):
             raise TypeError("rect_2 must be an instance of Rectangle")
 
-        return rect_1
+        if rect_1.area is rect_2.area:
+            return rect_1
+
+        else:
+            return rect_2
