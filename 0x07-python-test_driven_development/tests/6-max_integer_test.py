@@ -4,10 +4,25 @@
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
+
 class TestMaxInteger(unittest.TestCase):
-    def test_pass(self):
-        self.none(max_integer([]), None)
-        self.allminus(max_integer([-1, -2, -3, -4]), -1)
-        self.oneminus(max_integer([1, 2, 3, -4]), 3)
-   # def test_negative(self):
-        #self.test1(ValueError, max_integer, msg="Only negative numbers in the list")
+    def normal_test(self):
+        """
+        Test to check if function works as intended.
+        """
+        result = max_integer([1, 2, 3, 4])
+        self.assertEqual(result, 4)
+
+    def misc_test(self):
+        """
+        Test to check arguments that are not a positive integer.
+        """
+        result = max_integer([])
+        self.assertEqual(result, None)
+        result = max_integer([-1, -2, -3, -4])
+        self.assertEqual(result, -1)
+        result = max_integer([1, 2, 3, -4])
+        self.assertEqual(result, 3)
+
+    if __name__ == "__main__":
+        unittest.main()
