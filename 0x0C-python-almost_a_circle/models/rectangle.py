@@ -121,3 +121,11 @@ class Rectangle(Base):
             for row in range(self.__width):
                 print("#", end="")
             print()
+
+    def update(self, *args):
+        """
+        Updates the rectangle class
+        """
+        attr = ["id", "width", "height", "x", "y"]
+        for i, value in args:
+            setattr(self, attr[i]. value)
