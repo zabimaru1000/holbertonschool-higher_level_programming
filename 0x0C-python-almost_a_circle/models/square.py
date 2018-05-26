@@ -16,13 +16,14 @@ class Square(Rectangle):
         Instantiation of above arguments, calls from Rectangle
         """
         super().__init__(size, size, x, y, id)
+        self.size = size
 
     def __str__(self):
         """
         Str representation
         """
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
-                                                       self.size)
+                                                 self.size)
 
     @property
     def size(self):
