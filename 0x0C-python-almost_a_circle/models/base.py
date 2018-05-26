@@ -38,11 +38,10 @@ class Base:
         Static method, returns JSON string of argument
         """
         empty_list = []
-        if json_string is not None:
-            empty_list.append(json_string)
+        if json_string is None or len(json_string) is 0:
             return empty_list
         else:
-            return empty_list
+            return json.loads(json_string)
 
     @classmethod
     def save_to_file(cls, list_objs):
