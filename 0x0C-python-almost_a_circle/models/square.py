@@ -16,6 +16,8 @@ class Square(Rectangle):
         Instantiation of above arguments, calls from Rectangle
         """
         self.size = size
+        self.x = x
+        self.y = y
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
@@ -24,3 +26,17 @@ class Square(Rectangle):
         """
         return "[Square] ({}) {:d}/{:d} - {:d}".format(self.id, self.x, self.y,
                                                        self.size)
+    @property
+    def size(self):
+        """
+        Gets size and returns width
+        """
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        """
+        Sets size to width and height
+        """
+        self.width = value
+        self.height = value
