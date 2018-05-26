@@ -56,3 +56,13 @@ class Base:
                 empty_list.append(cls.to_dictionary(i))
         with open(filename, "w") as f:
             f.write(cls.to_json_string(empty_list))
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        Class method that returns instance with set attributes
+        """
+        dumbinstance = cls(69, 69)
+
+        dumbinstance.update(**dictionary)
+        return dumbinstance
