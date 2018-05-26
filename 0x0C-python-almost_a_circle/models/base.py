@@ -62,7 +62,11 @@ class Base:
         """
         Class method that returns instance with set attributes
         """
-        dumbinstance = cls(69, 69)
+        if cls.__name__ is "Rectangle":
+            dumbinstance = cls(69, 69)
+
+        elif cls.__name__ is "Square":
+            dumbinstance = cls(69)
 
         dumbinstance.update(**dictionary)
         return dumbinstance
