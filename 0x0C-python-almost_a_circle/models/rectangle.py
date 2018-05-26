@@ -13,7 +13,7 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """
-        Class constructor init
+        Instantiation of above arguments and calls from Base
         """
         super().__init__(id)
         self.__width = width
@@ -98,3 +98,12 @@ class Rectangle(Base):
         Returns area of rectangle
         """
         return self.__width * self.__height
+
+    def display(self):
+        """
+        Prints hashes to stdout depending on area
+        """
+        for col in range(self.__height):
+            for row in range(self.__width):
+                print("#", end="")
+            print()
