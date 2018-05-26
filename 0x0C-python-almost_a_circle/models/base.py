@@ -32,6 +32,18 @@ class Base:
         else:
             return json.dumps(list_dictionaries)
 
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        Static method, returns JSON string of argument
+        """
+        empty_list = []
+        if json_string is not None:
+            empty_list.append(json_string)
+            return empty_list
+        else:
+            return empty_list
+
     @classmethod
     def save_to_file(cls, list_objs):
         """
