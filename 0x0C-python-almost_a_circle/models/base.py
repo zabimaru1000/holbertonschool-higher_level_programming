@@ -70,3 +70,20 @@ class Base:
 
         dumbinstance.update(**dictionary)
         return dumbinstance
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        Class method that returns list of instances
+        """
+        empty_list = []
+        filename = "{}.json".format(cls.__name__)
+
+        if empty_list is None:
+            return empty_list
+
+        with open(filename, "r") as f:
+            load = cls.from_json_string(f.read())
+        for i in load:
+            empty_list.append(cls.create(**i))
+        return empty_list
