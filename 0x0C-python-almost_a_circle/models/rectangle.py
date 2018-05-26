@@ -113,11 +113,11 @@ class Rectangle(Base):
         """
         Prints hashes to stdout depending on area
         """
+        for y in range(self.y):
+            print()
         for col in range(self.__height):
             for x in range(self.x):
                 print(" ", end="")
             for row in range(self.__width):
                 print("#", end="")
-            print()
-        for y in range(self.y):
             print()
