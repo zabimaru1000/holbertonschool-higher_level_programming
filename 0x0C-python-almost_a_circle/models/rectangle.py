@@ -127,5 +127,5 @@ class Rectangle(Base):
         Updates the rectangle class
         """
         attr = ["id", "width", "height", "x", "y"]
-        for i, value in args:
-            setattr(self, attr[i]. value)
+        for i, value in list(args):
+            setattr(self, attr[i], value)
