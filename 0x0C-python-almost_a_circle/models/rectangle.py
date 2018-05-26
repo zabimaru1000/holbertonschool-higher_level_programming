@@ -26,8 +26,11 @@ class Rectangle(Base):
         Returns string representation
         """
         return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(self.id,
-                                                       self.x, self.y,
-                                                       self.width, self.height)
+                                                                 self.x,
+                                                                 self.y,
+                                                                 self.width,
+                                                                 self.height)
+
     @property
     def width(self):
         """
