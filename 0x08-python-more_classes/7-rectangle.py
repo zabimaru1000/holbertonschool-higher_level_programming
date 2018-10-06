@@ -25,7 +25,7 @@ class Rectangle:
             return string
         for col in range(self.__height):
             for row in range(self.__width):
-                string += Rectangle.print_symbol
+                string += str(self.print_symbol)
             if col < self.__height - 1:
                 string += "\n"
 
